@@ -1,0 +1,83 @@
+/* video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+} */
+
+.hero-container {
+  background: url("/images/img-stone.jpg") left center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  object-fit: contain;
+  justify-content: center;
+}
+
+.fa-chevron-right {
+  font-size: 0.7rem;
+}
+
+.learn-more {
+  text-decoration: none;
+}
+
+.hero-container h1 {
+  text-align: left;
+  font-size: 3.5rem;
+  color: white;
+  width: 90%;
+  margin: 70px 20px 10px 60px;
+}
+
+.hero-container p {
+  color: rgb(241, 241, 241);
+  font-size: 1.1rem;
+  margin: 40px 20px 40px 65px;
+  text-align: left;
+  width: 75%;
+}
+
+.hero-btns {
+  margin-left: 55px;
+}
+
+.hero-container h4 {
+  color: white;
+  font-weight: 400;
+  margin: 10px 0px 0px 15px;
+}
+
+.hero-container a {
+  color: rgba(241, 241, 241);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 570px) {
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* object-fit: contain; */
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .hero-container p {
+    margin: 8px 10px 20px 10px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .hero-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 70px 20px 10px 20px;
+  }
+}

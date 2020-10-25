@@ -1,0 +1,251 @@
+.list-page-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.nav-bar-backdrop-ruby {
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(255, 0, 0, 0.4);
+  position: fixed;
+  top: 0px;
+  z-index: 998;
+}
+
+.nav-bar-backdrop-sapphires {
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(17, 0, 255, 0.3);
+  position: fixed;
+  top: 0px;
+  z-index: 998;
+}
+
+.nav-bar-backdrop-emerald {
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(0, 255, 42, 0.3);
+  position: fixed;
+  top: 0px;
+  z-index: 998;
+}
+
+.top-of-wrapper {
+  background-color: #000000;
+  height: 250px;
+}
+
+.top-of {
+  width: 20%;
+  font-size: 80px;
+  padding-top: 80px;
+  text-align: left;
+  margin-left: 100px;
+  background: -webkit-linear-gradient(left, rgb(255, 0, 0), rgb(80, 0, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-of-sapphires {
+  width: 25%;
+  font-size: 80px;
+  padding-top: 80px;
+  text-align: left;
+  margin-left: 100px;
+  background: -webkit-linear-gradient(left, rgb(0, 0, 255), rgb(0, 10, 99));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-of-emeralds {
+  width: 25%;
+  font-size: 80px;
+  padding-top: 80px;
+  text-align: left;
+  margin-left: 100px;
+  background: -webkit-linear-gradient(left, rgb(0, 255, 0), rgb(6, 68, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.mobile-filter-area {
+  display: none;
+}
+
+.filter-area {
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filter-type {
+  margin: 10px auto;
+}
+
+.filtering {
+  width: 100%;
+}
+
+.sorting {
+  width: 100%;
+  /* text-align: center; */
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.fa-filter {
+  margin-left: 10px;
+}
+.filter-mobile {
+  padding: 10px 0;
+  border-top: 1px solid rgb(228, 228, 228);
+}
+
+.filter-mobile:first-child {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgb(146, 146, 146);
+}
+
+.sort-options {
+  width: 135px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 350px;
+  height: 500px;
+  margin: 10px;
+  transition: all ease 0.3s;
+}
+
+.product-image-wrapper {
+  width: 100%;
+  height: 400px;
+  box-shadow: inset 0px -100px 50px -50px #f5f5f5;
+}
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -2;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all ease 0.4s;
+}
+
+.product-details-wrapper {
+  background-color: #f5f5f5;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.product-name-ruby {
+  text-decoration: none;
+  color: maroon;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 1.5rem;
+}
+
+.product-name-sapphire {
+  text-decoration: none;
+  color: rgb(0, 9, 128);
+  text-align: center;
+  padding-top: 5px;
+  font-size: 1.5rem;
+}
+
+.product-name-emerald {
+  text-decoration: none;
+  color: rgb(0, 102, 0);
+  text-align: center;
+  padding-top: 5px;
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  text-align: center;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.fa-chevron-down {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 960px) {
+  .top-of-wrapper {
+    height: 200px;
+  }
+
+  .top-of {
+    width: 50%;
+    font-size: 60px;
+    padding-top: 50px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  .top-of-sapphires {
+    width: 80%;
+    font-size: 60px;
+    padding-top: 50px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  .top-of-emeralds {
+    width: 80%;
+    font-size: 60px;
+    padding-top: 50px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  .filter-area {
+    display: none;
+  }
+
+  .mobile-filter-area {
+    display: contents;
+    box-shadow: 1px 0px 1px black;
+  }
+
+  .product-section {
+    margin-top: 0px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(228, 228, 228);
+  }
+}

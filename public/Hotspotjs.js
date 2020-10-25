@@ -1,0 +1,56 @@
+const tooltips = document.querySelectorAll(".tooltip");
+const fullDiv = document.querySelector(".hp-section");
+const container = document.querySelector(".hp-container");
+let timeoutId;
+window.addEventListener("resize", contentPosition);
+window.addEventListener("load", contentPosition);
+
+function contentPosition() {
+  tooltips.forEach((tooltip) => {
+    const pin = tooltip.querySelector(".pin");
+    const content = tooltip.querySelector(".tooltip-content");
+    const arrow = tooltip.querySelector(".arrow");
+    const pinLeft = pin.offsetLeft;
+    if (pinLeft + content.offsetWidth / 2 > fullDiv.offsetWidth) {
+      const extraLeft =
+        fullDiv.offsetWidth - (pinLeft + content.offsetWidth / 2);
+      // console.log('right-conflict', tooltip)
+      content.style.left =
+        pinLeft - content.offsetWidth / 2 + extraLeft - 30 + "px";
+      content.style.top = pin.offsetTop + 30 + "px";
+    } else if (
+      pin.offsetLeft + container.offsetLeft <
+      content.offsetWidth / 2
+    ) {
+      // console.log('left conflict', pin.offsetLeft)
+      content.style.left = -container.offsetLeft + "px";
+      content.style.top = pin.offsetTop + 30 + "px";
+    } else {
+      content.style.left = pinLeft - content.offsetWidth / 2 + "px";
+      content.style.top = pin.offsetTop + 30 + "px";
+    }
+    arrow.style.left =
+      pinLeft - content.offsetLeft + pin.offsetWidth / 2 + "px";
+  });
+}
+tooltips.forEach((tooltip) => {
+  const pin = tooltip.querySelector(".pin");
+  const content = tooltip.querySelector(".tooltip-content");
+  pin.addEventListener("mousemove", () => {
+    tooltip.classList.add("active");
+  });
+  pin.addEventListener("mouseleave", () => {
+    timeoutId = setTimeout(() => {
+      tooltip.classList.remove("active");
+    });
+  });
+  content.addEventListener("mouseover", () => {
+    clearTimeout(timeoutId);
+    tooltip.classList.add("active");
+  });
+  content.addEventListener("mouseleave", () => {
+    timeoutId = setTimeout(() => {
+      tooltip.classList.remove("active");
+    });
+  });
+});
